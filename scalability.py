@@ -29,3 +29,22 @@ def plotSpeedup(numbersOfProcessors,parallelTimes,sequentialTime=None):
   plt.grid()
 
   plt.show()
+
+def plotEfficiency(numbersOfProcessingUnits,parallelTimes,sequentialTime=None):
+
+  if sequentialTime is None:
+      sequentialTime = parallelTimes[0]
+
+  actualEfficiency = efficiency(numbersOfProcessingUnits,parallelTimes,sequentialTime)
+
+  plt.plot(numbersOfProcessingUnits,actualEfficiency)
+
+  blue_patch = mpatches.Patch(color='blue', label='Efficiency')
+  plt.legend(handles=[blue_patch],loc='upper right')
+
+  plt.xlabel('Number of processing units')
+  plt.ylabel('Efficiency')
+
+  plt.grid()
+
+  plt.show()
