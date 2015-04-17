@@ -15,9 +15,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define NRA  500               /* number of rows in matrix A */
-#define NCA  500               /* number of columns in matrix A */
-#define NCB  500               /* number of columns in matrix B */
+#define NRA  2000               /* number of rows in matrix A */
+#define NCA  2000               /* number of columns in matrix A */
+#define NCB  2000               /* number of columns in matrix B */
 #define MASTER 0               /* taskid of first task */
 #define FROM_MASTER 1          /* setting a message type */
 #define FROM_WORKER 2          /* setting a message type */
